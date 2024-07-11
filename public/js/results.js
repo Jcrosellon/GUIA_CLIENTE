@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <div style="text-align: center;">
                                         <img src="../public/img/ESTADO1.png" alt="Logo" style="width: 25px; height: 25px;">
                                         <p class="pedido-realizado"><strong>Pedido Realizado:</strong></p>
-                                        <p>${order.statusDate}</p>
+                                        <p class="fecha-realizado">${order.statusDate}</p>
                                     </div>
                                     <div>
                                         ${index >= 1 ? `<div><p><strong>Estamos preparando tu pedido:</strong></p><p>${order.preparingDate}</p></div>` : ''}
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     </div>
                                 </div>
                                 <div class="total-compra">
-                                    <p><strong>Total de la compra:</strong> $${order.total.toFixed(2)}</p>
+                                    <p><strong>Total de la compra:</strong> $<span class="total-compra-valor">${order.total.toFixed(2)}</span></p>
                                 </div>
                             `;
                             resultsSection.appendChild(resultDiv);
