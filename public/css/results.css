@@ -1,85 +1,162 @@
-body {
-    font-family: 'Montserrat', sans-serif;
+/* Estilos Generales */
+html body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    background-color: #f3ebd9; /* Color de fondo */
+    font-family: 'Montserrat', Arial, sans-serif; /* Familia de fuentes */
 }
 
+/* Estilos del Encabezado */
 .header {
-    background-color: #FBBA00;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
+    background-color: #FBBA00; /* Color de fondo del encabezado */
+    color: white; /* Color del texto del encabezado */
+    text-align: center; /* Alineación del texto al centro */
+    padding: 1px; /* Espaciado interno */
+    font-weight: normal !important; /* Quitar negrita */
+    font-size: 14px; /* Tamaño de fuente del encabezado */
 }
 
+/* Estilos del Contenido */
 .content {
-    padding: 2rem;
+    padding: 1rem; /* Espaciado interno */
+    font-size: 38px; /* Tamaño de fuente del contenido */
 }
 
+/* Estilos de la Sección de Filtros */
 .filter-section {
-    margin-bottom: 2rem;
+    margin-bottom: 0rem; /* Margen inferior */
 }
 
 .filter-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Flexbox */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Alineación de elementos al centro */
+    padding: 1px; /* Espaciado interno */
+    background-color: #ffffff; /* Color de fondo */
+    border-radius: 0px; /* Radio del borde */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Sombra del contenedor */
+    margin-bottom: 1rem; /* Margen inferior */
 }
 
 .input-container {
-    position: relative;
-    display: inline-block;
+    position: relative; /* Posición relativa */
+    display: inline-block; /* Bloque en línea */
+    font-size: 18px; /* Tamaño de fuente del contenedor de entrada */
 }
 
 .search-order-input {
-    padding-right: 30px; /* Espacio para el ícono */
-    box-sizing: border-box;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding-right: 1px; /* Espaciado a la derecha para el ícono */
+    box-sizing: border-box; /* Tamaño del cuadro */
+    padding: 0.3rem; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de fuente */
+    border: 2px solid #ccc; /* Borde */
+    border-radius: 0px; /* Radio del borde */
+    margin: 15px;
 }
 
 .search-order-icon {
-    position: absolute;
-    right: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none; /* Permite hacer clic en el input, no en el ícono */
-    font-size: 1rem;
+    position: absolute; /* Posición absoluta */
+    right: 20px; /* Posición a la derecha */
+    top: 50%; /* Posición superior */
+    transform: translateY(-50%); /* Transformación */
+    pointer-events: none; /* Eventos de puntero desactivados */
+    font-size: 10rem; /* Tamaño de fuente */
 }
 
 .search-order-button {
-    background-color: #FBBA00;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
+    border: none; /* Sin borde */
+    padding: 0.5rem 0rem; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de puntero */
+    border-radius: 30px; /* Radio del borde */
 }
 
+/* Estilos de la Sección de Resultados */
 .results-section {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Dirección de columna */
+    gap: 1rem; /* Espacio entre elementos */
 }
 
 .result-item {
-    background-color: #ffffff;
-    padding: 1rem;
-    border: 1px solid #FBBA00;
-    border-radius: 10px;
+    position: relative; /* Posición relativa */
+    background-color: #ffffff; /* Color de fondo */
+    padding: 1rem; /* Espaciado interno */
+    border-radius: 0px; /* Radio del borde */
+    margin: 1rem 0; /* Margen */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Sombra del cuadro */
+}
+
+.result-item::before {
+    content: ""; /* Contenido vacío */
+    position: absolute; /* Posición absoluta */
+    top: 0; /* Posición superior */
+    left: 0; /* Posición a la izquierda */
+    width: 8px; /* Ancho */
+    background-color: rgb(148, 148, 148); /* Color de fondo */
+    height: calc(91% + 20px); /* Altura */
+    border-radius: 0px 0 0 0px; /* Radio del borde */
 }
 
 .result-item p {
-    margin: 0.5rem 0;
+    margin: 0.5rem 0; /* Margen */
+    font-size: 16px; /* Tamaño de fuente para párrafos */
+}
+
+.result-item .linea {
+    border-top: 1px solid #ccc; /* Borde superior */
+    margin-top: 1px; /* Margen superior */
+    margin-bottom: 10px; /* Margen inferior */
+    padding-top: 1px; /* Espaciado superior */
+    padding-bottom: 1px; /* Espaciado inferior */
+}
+
+.result-item img {
+    display: block; /* Mostrar como bloque */
+    margin: 0 auto 10px auto; /* Centrar imagen con margen */
+}
+
+.result-item p strong {
+    font-weight: bold; /* Texto en negrita */
+    font-size: 16px; /* Tamaño de fuente para texto en negrita */
+}
+
+/* Estilos específicos para diferentes tamaños de fuente */
+
+.result-item .no-pedido, .result-item .fecha-compra {
+    font-size: 18px; /* Tamaño de fuente para No de pedido y Fecha de la compra */
+}
+
+.result-item .pedido-realizado {
+    font-size: 20px; /* Tamaño de fuente para Pedido realizado */
+}
+
+.result-item .total-compra {
+    font-size: 22px; /* Tamaño de fuente para Total de la compra */
+    text-align: right; /* Alineación a la derecha */
+}
+
+.result-item .fecha-realizado {
+    font-size: 16px; /* Tamaño de fuente para la fecha de Pedido realizado */
+}
+
+.result-item .total-compra-valor {
+    font-size: 30px; /* Tamaño de fuente para el valor del total de la compra */
+}
+
+.result-item hr {
+    border: none; /* Sin borde */
+    border-top: 2px solid #b6b6b6; /* Borde superior */
+    margin: 10px 0; /* Margen */
 }
 
 .filter-label {
-    margin-right: 0.5rem;
+    margin-right: 0.5rem; /* Margen derecho */
+    font-size: 16px; /* Tamaño de fuente para la etiqueta del filtro */
 }
 
 .filter-input-wrapper {
-    display: flex;
-    align-items: center;
+    display: flex; /* Flexbox */
+    align-items: center; /* Alineación de elementos al centro */
 }
