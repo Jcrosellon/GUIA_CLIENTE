@@ -37,6 +37,7 @@ html body {
     border-radius: 0px; /* Border radius */
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
     margin-bottom: 1rem; /* Bottom margin */
+    margin: 20px; /* Margin */
 }
 
 .input-container {
@@ -46,13 +47,12 @@ html body {
 }
 
 .search-order-input {
-    padding-right: 1px; /* Padding right for icon */
-    box-sizing: border-box; /* Box sizing */
-    padding: 0.3rem; /* Padding */
-    font-size: 1rem; /* Font size */
-    border: 2px solid #ccc; /* Border */
-    border-radius: 0px; /* Border radius */
-    margin: 15px;
+    width: calc(100% - 50px); /* Ajustamos el ancho para dejar espacio al botón */
+    padding: 10px 20px; /* Ajustamos el padding */
+    box-sizing: border-box;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 4px;
 }
 
 .search-order-icon {
@@ -65,11 +65,16 @@ html body {
 }
 
 .search-order-button {
-    border: none; /* No border */
-    padding: 0.5rem 0rem; /* Padding */
-    font-size: 1rem; /* Font size */
-    cursor: pointer; /* Cursor pointer */
-    border-radius: 30px; /* Border radius */
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50px; /* Ancho fijo del botón */
+    border: none;
+    background: #fff; /* Fondo blanco para que el botón sea visible */
+    cursor: pointer;
+    font-size: 1rem;
+    color: #aaa;
 }
 
 /* Results Section Styles */
@@ -82,10 +87,11 @@ html body {
 .result-item {
     position: relative; /* Position relative */
     background-color: #ffffff; /* Background color */
-    padding: 1rem; /* Padding */
+    padding: 20px; /* Padding */
     border-radius: 0px; /* Border radius */
-    margin: 1rem 0; /* Margin */
+    margin: 20px; /* Margin */
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Box shadow */
+    padding-top: 1px; /* Top padding */
 }
 
 .result-item::before {
