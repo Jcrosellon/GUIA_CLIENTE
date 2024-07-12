@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados de Búsqueda</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-    <link rel="stylesheet" href="../public/css/results.css"> <!-- Asegúrate que la ruta sea correcta -->
-    <script src="js/results.js" defer></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resultados de Búsqueda</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <link rel="stylesheet" href="../public/css/results.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="js/results.js" defer></script>
+    </head>
 <body>
     <div id="app">
         <div class="header">
@@ -21,8 +23,9 @@
                         <button class="search-order-button">🔍</button>
                     </div>
                     <div class="filter-input-wrapper">
-                        <label for="filterInput" class="filter-label">Filtrar por fecha</label>
-                        <input type="text" id="filterInput" class="filter-input" placeholder="Últimos 6 meses">
+                        <label for="datepickerInput" class="filter-label">Filtrar por fecha</label>
+                        <input type="text" id="datepickerInput" class="filter-input" placeholder="Selecciona una fecha">
+                        <span for="datepickerInput" id="datepickerInput" class="flatpickr-input-arrow">></span>
                     </div>
                 </div>
             </div>

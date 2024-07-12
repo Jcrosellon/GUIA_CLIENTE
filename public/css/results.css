@@ -36,7 +36,7 @@ html body {
     background-color: #ffffff; /* Background color */
     border-radius: 0px; /* Border radius */
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
-    margin-bottom: 1rem; /* Bottom margin */
+    margin-bottom: 0rem; /* Bottom margin */
     margin: 20px; /* Margin */
 }
 
@@ -47,12 +47,13 @@ html body {
 }
 
 .search-order-input {
-    width: calc(100% - 50px); /* Ajustamos el ancho para dejar espacio al botón */
-    padding: 10px 20px; /* Ajustamos el padding */
+    width: calc(120% - 80px); /* Ajustamos el ancho para dejar espacio al botón */
+    padding: 10px 30px; /* Ajustamos el padding */
     box-sizing: border-box;
     font-size: 1rem;
     border: 2px solid #ccc;
-    border-radius: 4px;
+    margin: 5px;
+    margin-left: 15px;
 }
 
 .search-order-icon {
@@ -61,7 +62,7 @@ html body {
     top: 50%; /* Top position */
     transform: translateY(-50%); /* Transform */
     pointer-events: none; /* Pointer events none */
-    font-size: 10rem; /* Font size */
+    font-size: 1rem; /* Font size */
 }
 
 .search-order-button {
@@ -71,7 +72,7 @@ html body {
     height: 100%;
     width: 50px; /* Ancho fijo del botón */
     border: none;
-    background: #fff; /* Fondo blanco para que el botón sea visible */
+    background: transparent; /* Fondo blanco para que el botón sea visible */
     cursor: pointer;
     font-size: 1rem;
     color: #aaa;
@@ -90,8 +91,9 @@ html body {
     padding: 20px; /* Padding */
     border-radius: 0px; /* Border radius */
     margin: 20px; /* Margin */
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Box shadow */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Box shadow */
     padding-top: 1px; /* Top padding */
+    margin-top: -10px;
 }
 
 .result-item::before {
@@ -109,7 +111,7 @@ html body {
 
 .result-item .linea {
     border-top: 1px solid #ccc; /* Border top */
-    margin-top: 1px; /* Top margin */
+    margin-top: -1px; /* Top margin */
     margin-bottom: 10px; /* Bottom margin */
     padding-top: 1px; /* Top padding */
     padding-bottom: 1px; /* Bottom padding */
@@ -149,14 +151,52 @@ html body {
     border: none; /* No border */
     border-top: 2px solid #b6b6b6; /* Border top */
     margin: 10px 0; /* Margin */
+    
 }
 
 .filter-label {
     margin-right: 0.5rem; /* Right margin */
-    font-size: 16px; /* Font size for filter label */
+    font-size: 10px; /* Font size for filter label */
+    color: #aaa;
 }
 
 .filter-input-wrapper {
-    display: flex; /* Flexbox */
-    align-items: center; /* Align items center */
+    width: 18%; /* Ancho completo del select */
+    padding: 1px; /* Padding */
+    font-size: 1rem; /* Tamaño de fuente */
+    border: none; /* Sin borde */
+    background-color: transparent; /* Fondo transparente */
+    cursor: pointer; /* Cursor de puntero */
+    border-bottom: 2px solid #b6b6b6; /* Border top */
+    margin-right: 15px;
+    
+}
+
+.flatpickr-input {
+    border: none; /* Quitar borde */
+    background: none; /* Fondo transparente */
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 1px 1px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar cursor */
+   
+    
+
+}
+
+.flatpickr-calendar {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 0px; /* Borde redondeado */
+    overflow: hidden; /* Ocultar desbordamiento */
+    
+    
+}
+
+.flatpickr-input-arrow {
+    position: absolute; /* Posición absoluta */
+    top: 23%; /* Centrado vertical */
+    right: 60px; /* Ajuste a la derecha */
+    transform: translateY(-50%) rotate(90deg); /* Centrado vertical y rotación */
+    color: #000000; /* Color del icono */
+    
+    
 }
